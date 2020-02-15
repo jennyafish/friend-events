@@ -4,6 +4,7 @@ import About from './about';
 import FindEvent from './findevent';
 import TrackEvent from './trackevent';
 import CreateEvent from './createevent';
+import Login from './login';
 import { Switch, Route } from 'react-router-dom';
 
 const Main = () => (
@@ -13,6 +14,7 @@ const Main = () => (
         <Route path='/findevent' component={FindEvent} />
         <Route path='/trackevent' component={TrackEvent} />
         <Route path='/createevent' component={CreateEvent} />
+        <Route path='/login' component={Login} />
     </Switch>
 )
 

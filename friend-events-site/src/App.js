@@ -16,6 +16,7 @@ class App extends Component {
                     <Link to="/findevent">Find Event</Link>
                     <Link to="/trackevent">Track Event</Link>
                     <Link to="/createevent">Create Event</Link>
+                    <Link to="/login">Login</Link>
                 </Navigation>
             </Header>
             <Drawer title="Event Pal">
@@ -25,6 +26,7 @@ class App extends Component {
                     <Link to="/findevent">Find Event</Link>
                     <Link to="/trackevent">Track Event</Link>
                     <Link to="/createevent">Create Event</Link>
+                    <Link to="/login">Login</Link>
                 </Navigation>
             </Drawer>
             <Content>

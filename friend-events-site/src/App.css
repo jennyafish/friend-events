@@ -8,33 +8,28 @@
     width: 80%;
     text-align: center;
 }
-.banner-text-abs {
+.banner-text {
     position: absolute;
     background-color: transparent;
     opacity: .8;
-    width: 70%;
-    margin: auto;
+    width: 80%;
+    margin-left: 9%;
+    margin-right: 9%;
     border-radius: 10px;
     text-align: center;
+    align-self: center;
 }
-.banner-text-abs h1 {
+.banner-text h1 {
     font-size: 66px;
     font-weight: bold;
     color: white;
 }
-.banner-text {
-    background-color: transparent;
-    opacity: .8;
-    width: 70%;
-    margin: auto;
-    border-radius: 10px;
-    text-align: center;
-}
 .button {
     position: center;
-    background-color: #119cc2; /* Green */
+    background-color: #119cc2;
     color: white;
-    padding: 50px 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
