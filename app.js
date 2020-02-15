@@ -6,8 +6,10 @@ const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
 const react = require('react');
 const mongoose = require('mongoose');
+const parser = require('body-parser');
 
 const app = express();
+app.use(parser.json());
 
 // import mongoose models
 const Users = require('./models/user.js');
@@ -85,7 +87,7 @@ app.post('/user', (req, res) => {
 
 // create event
 app.post('/event', (req, res) => {
-  var newEvent = new Event({
+  var newEvent = new Events({
     eventName: req.eventName,
     users: [],
     startTime: req.startTime,
