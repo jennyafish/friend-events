@@ -9,7 +9,7 @@ class App extends Component {
   return (
     <div style={{height: '1000px', position: 'relative'}}>
         <Layout style={{background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover'}}>
-            <Header transparent title="Event Pal" style={{color: 'white'}}>
+            <Header className="header-color" title="Event Pal" style={{color: 'white'}}>
                 <Navigation>
                     <Link to="/about">About</Link>
                     <Link to="/findevent">Find Event</Link>
@@ -17,6 +17,14 @@ class App extends Component {
                     <Link to="/createevent">Create Event</Link>
                 </Navigation>
             </Header>
+            <Drawer title="Event Pal">
+                <Navigation>
+                    <Link to="/about">About</Link>
+                    <Link to="/findevent">Find Event</Link>
+                    <Link to="/trackevent">Track Event</Link>
+                    <Link to="/createevent">Create Event</Link>
+                </Navigation>
+            </Drawer>
             <Content>
                 <div className="page-content" />
                 <Main/>
