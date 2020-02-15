@@ -5,6 +5,7 @@ const http = require('http');
 const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
 const react = require('react');
+const mongoose = require('mongoose');
 
 const app = express();
 
@@ -15,7 +16,9 @@ const Event = require('models/event')
 
 
 
-debug('booting');
+
+const dbUrl = "mongodb+srv://bertalay:gZHQqJ1Fg0AkB1S2@cluster0-ecpkw.gcp.mongodb.net/test?authSource=admin&replicaSet=Cluster0-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
+mongoose.connect(dbUrl);
 
 
 
@@ -23,22 +26,85 @@ debug('booting');
 //App behavior
 //Gets all events
 app.get('/events', (req, res) =>{
+  console.log("Finding all events");
   Events.find({}).then(found => {
     return res.json(found);
   }).catch(err => console.log(err));
 });
 
+//Get event by eventname
+app.get('/events/:eventname', (req, res) => {
+  console.log("Finding event:" + "eventname");
+  Events.find({ eventName: eventname }).then(found => {
+    return res.json(found);
+  }).catch(err => console.log(err));
+});
+
+/*
 //Filters by time
-app.get('/events/:timeRange', (req, res) =>{
+app.get('/events/:timeRange', (req, res) => {
+  var startTime = req.query.start
+  var endTime = req.query.end
+
   Events.find({}).then(found => {
     return res.json(found);
   }).catch(err => console.log(err));
 });
+*/
+
+//Gets info of a single user
+app.get('/users/:username', (req, res) =>{
+  console.log("Finding user:" + username);
+  Users.findOne({ username: username }).then(found => {
+    return res.json(found);
+  }).catch(err => console.log(err));
+});
+
+
+// signup user [username] for event [eventname]
+app.put('/events/:eventname/:username', (req, res) => {
+  console.log("Signing user:" + username + " up for event:" + eventname);
+  val user = User.findOne({ username: username });
+  val event = Events.findOne({ eventName: eventname });
+  Events.updateOne({ _id: event._id }, { $push: {users: user._id } });
+  Users.updateOne({ _id: user._id }, { $set: {events: event._id } });
+});
+
+
+// create user
+app.post('/user', (req, res) => {
+  var newUser = new User({ 
+    username: req.username, 
+    password: User.hashPassword(req.password),
+    events: [],
+    email: req.email
+  });
+  newUser.save().then(() => console.log("Made user:" + req.username));
+});
+
+
+// create event
+app.post('/event', (req, res) => {
+  var newEvent = new Event({ 
+    eventName: req.eventName,
+    users: [],
+    startTime: req.startTime,
+    endTime: req.endTime
+  });
+  newUser.save().then(() => console.log("Made user:" + req.username));
+});
+
+
+
+
+
 
 app.get('/', function (req, res) {
   console.log('got to route /');
   res.send('Homepage');
 })
+
+
 
 app.get('/test/create/:collectionName', function (req, res) {
   console.log("wehhh");
@@ -74,7 +140,7 @@ function onListening() {
 }
 
 
-var dbUrl = "mongodb+srv://bertalay:gZHQqJ1Fg0AkB1S2@cluster0-ecpkw.gcp.mongodb.net/test?authSource=admin&replicaSet=Cluster0-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
+
 
 function createCollection(collectionName) {
   MongoClient.connect(dbUrl, function(err, db) {

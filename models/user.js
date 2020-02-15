@@ -5,11 +5,8 @@ const bcrypt = require("bcryptjs"); //used for hashing passwords
 const userSchema = new mongoose.Schema({
    username: String,
    password: String,
-   bio: String,
    events: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Event' }],
    email: String
-   //posts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Post' }],
-   //pic: String //Using type String for now, bound to change
 });
 
 module.exports = mongoose.model("User", userSchema);
