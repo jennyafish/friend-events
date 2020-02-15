@@ -14,3 +14,13 @@ implementation
 features
 - user settings: want to find friends, just looking for a ride
 - some location based
+
+
+## How to run
+
+```
+> npm install
+> npm start
+```
+
+Then go to `localhost:8000` in your browser.
