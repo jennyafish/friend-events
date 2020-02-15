@@ -1,3 +1,4 @@
+//Imports
 const express = require('express');
 const debug = require('debug')('http');
 const http = require('http');
@@ -9,8 +10,30 @@ const app = express();
 
 // import mongoose models
 const User = require('models/user');
+const Event = require('models/event')
+
+
+
 
 debug('booting');
+
+
+
+
+//App behavior
+//Gets all events
+app.get('/events', (req, res) =>{
+  Events.find({}).then(found => {
+    return res.json(found);
+  }).catch(err => console.log(err));
+});
+
+//Filters by time
+app.get('/events/:timeRange', (req, res) =>{
+  Events.find({}).then(found => {
+    return res.json(found);
+  }).catch(err => console.log(err));
+});
 
 app.get('/', function (req, res) {
   console.log('got to route /');
@@ -30,6 +53,13 @@ app.get('/test/insert/:collectionName/:userName/:ssn', function (req, res) {
 })
 
 app.post('/events/create')
+
+
+
+
+
+
+
 
 
 const server = http.createServer(app);
