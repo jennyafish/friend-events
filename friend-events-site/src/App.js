@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 class App extends Component {
   render() {
   return (
-    <div style={{height: '1000px', position: 'relative'}}>
+    <div style={{height: '900px', position: 'relative'}}>
         <Layout style={{background: 'url(https://media.istockphoto.com/photos/blue-domestic-room-background-picture-id514987530?k=6&m=514987530&s=612x612&w=0&h=b92EYpLKAhCjCfYnYgOFxc8nYreB5vv9qb9tsluyW7Q=) center / cover'}}>
             <Header className="header-color" title="Event Pal" style={{color: 'white'}}>
                 <Navigation>

@@ -16,7 +16,7 @@ class LandingPage extends Component {
                         />
                     </Cell>
                     <Cell col={12}>
-                        <a href="/findevent" className="button banner-text">Find an event</a>
+                        <a href="/findevent" className="button banner-text">Find an event!</a>
                     </Cell>
                 </Grid>
             </div>

@@ -21,7 +21,7 @@ class FindEvent extends Component {
                             Mauris sagittis pellentesque lacus eleifend lacinia...
                         </CardText>
                         <CardActions border>
-                            <Button colored>Get Started</Button>
+                            <Button colored>Join Event</Button>
                         </CardActions>
                         
                     </Card>
@@ -34,7 +34,7 @@ class FindEvent extends Component {
                             Mauris sagittis pellentesque lacus eleifend lacinia...
                         </CardText>
                         <CardActions border>
-                            <Button colored>Get Started</Button>
+                            <Button colored>Join Event</Button>
                         </CardActions>
                         <CardMenu style={{color: '#fff'}}>
                             
@@ -49,7 +49,7 @@ class FindEvent extends Component {
                             Mauris sagittis pellentesque lacus eleifend lacinia...
                         </CardText>
                         <CardActions border>
-                            <Button colored>Get Started</Button>
+                            <Button colored>Join Event</Button>
                         </CardActions>
                         <CardMenu style={{color: '#fff'}}>
                            
@@ -71,7 +71,7 @@ class FindEvent extends Component {
                             Mauris sagittis pellentesque lacus eleifend lacinia...
                         </CardText>
                         <CardActions border>
-                            <Button colored>Get Started</Button>
+                            <Button colored>Join Event</Button>
                         </CardActions>
                         <CardMenu style={{color: '#fff'}}>
                            
@@ -95,7 +95,7 @@ class FindEvent extends Component {
                             Mauris sagittis pellentesque lacus eleifend lacinia...
                         </CardText>
                         <CardActions border>
-                            <Button colored>Get Started</Button>
+                            <Button colored>Join Event</Button>
                         </CardActions>
                         <CardMenu style={{color: '#fff'}}>
                             
@@ -110,7 +110,7 @@ class FindEvent extends Component {
                             Mauris sagittis pellentesque lacus eleifend lacinia...
                         </CardText>
                         <CardActions border>
-                            <Button colored>Get Started</Button>
+                            <Button colored>Join Event</Button>
                         </CardActions>
                         <CardMenu style={{color: '#fff'}}>
                             
@@ -125,7 +125,7 @@ class FindEvent extends Component {
                             Mauris sagittis pellentesque lacus eleifend lacinia...
                         </CardText>
                         <CardActions border>
-                            <Button colored>Get Started</Button>
+                            <Button colored>Join Event</Button>
                         </CardActions>
                         <CardMenu style={{color: '#fff'}}>
                             
@@ -150,7 +150,7 @@ class FindEvent extends Component {
                             Mauris sagittis pellentesque lacus eleifend lacinia...
                         </CardText>
                         <CardActions border>
-                            <Button colored>Get Started</Button>
+                            <Button colored>Join Event</Button>
                         </CardActions>
                         <CardMenu style={{color: '#fff'}}>
                            
@@ -165,7 +165,7 @@ class FindEvent extends Component {
                             Mauris sagittis pellentesque lacus eleifend lacinia...
                         </CardText>
                         <CardActions border>
-                            <Button colored>Get Started</Button>
+                            <Button colored>Join Event</Button>
                         </CardActions>
                         <CardMenu style={{color: '#fff'}}>
                            
@@ -180,7 +180,7 @@ class FindEvent extends Component {
                             Mauris sagittis pellentesque lacus eleifend lacinia...
                         </CardText>
                         <CardActions border>
-                            <Button colored>Get Started</Button>
+                            <Button colored>Join Event</Button>
                         </CardActions>
                         <CardMenu style={{color: '#fff'}}>
                             
@@ -204,7 +204,7 @@ class FindEvent extends Component {
                             Mauris sagittis pellentesque lacus eleifend lacinia...
                         </CardText>
                         <CardActions border>
-                            <Button colored>Get Started</Button>
+                            <Button colored>Join Event</Button>
                         </CardActions>
                         <CardMenu style={{color: '#fff'}}>
                             
@@ -219,7 +219,7 @@ class FindEvent extends Component {
                             Mauris sagittis pellentesque lacus eleifend lacinia...
                         </CardText>
                         <CardActions border>
-                            <Button colored>Get Started</Button>
+                            <Button colored>Join Event</Button>
                         </CardActions>
                         <CardMenu style={{color: '#fff'}}>
                             
@@ -234,7 +234,7 @@ class FindEvent extends Component {
                             Mauris sagittis pellentesque lacus eleifend lacinia...
                         </CardText>
                         <CardActions border>
-                            <Button colored>Get Started</Button>
+                            <Button colored>Join Event</Button>
                         </CardActions>
                         <CardMenu style={{color: '#fff'}}>
                             
