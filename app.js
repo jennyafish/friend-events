@@ -10,8 +10,8 @@ const mongoose = require('mongoose');
 const app = express();
 
 // import mongoose models
-const User = require('models/user');
-const Event = require('models/event')
+const Users = require('./models/user.js');
+const Events = require('./models/event.js');
 
 
 
@@ -34,8 +34,8 @@ app.get('/events', (req, res) =>{
 
 //Get event by eventname
 app.get('/events/:eventname', (req, res) => {
-  console.log("Finding event:" + "eventname");
-  Events.find({ eventName: eventname }).then(found => {
+  console.log("Finding event:" + req.params.eventname);
+  Events.find({ eventName: req.params.eventname }).then(found => {
     return res.json(found);
   }).catch(err => console.log(err));
 });
@@ -64,8 +64,8 @@ app.get('/users/:username', (req, res) =>{
 // signup user [username] for event [eventname]
 app.put('/events/:eventname/:username', (req, res) => {
   console.log("Signing user:" + username + " up for event:" + eventname);
-  val user = User.findOne({ username: username });
-  val event = Events.findOne({ eventName: eventname });
+  let user = User.findOne({ username: username });
+  let event = Events.findOne({ eventName: eventname });
   Events.updateOne({ _id: event._id }, { $push: {users: user._id } });
   Users.updateOne({ _id: user._id }, { $set: {events: event._id } });
 });
@@ -91,7 +91,7 @@ app.post('/event', (req, res) => {
     startTime: req.startTime,
     endTime: req.endTime
   });
-  newUser.save().then(() => console.log("Made user:" + req.username));
+  newEvent.save().then(() => console.log("Made event:" + req.eventName));
 });
 
 

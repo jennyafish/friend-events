@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
 const eventSchema = new mongoose.Schema({
-  eventName: String
-  users: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }]
-  startTime: Date
+  eventName: String,
+  users: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Users' }],
+  startTime: Date,
   endTime: Date
 });
 
-module.exports = mongoose.model("Event", eventSchema)
+module.exports = mongoose.model("Events", eventSchema)
