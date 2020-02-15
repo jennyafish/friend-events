@@ -40,3 +40,12 @@
     display: inline-block;
     font-size: 66px;
 }
+.events-grid{
+    display: flex;
+    flexWrap: 'wrap';
+    justifyContent: 'space-around';
+}
+.event-text{
+    text-align: center;
+}
+
