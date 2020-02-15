@@ -5,9 +5,9 @@ class LandingPage extends Component {
     render() {
         return(
             <div style={{width: '100%', margin: 'auto'}}>
-                <Grid className="landing-grid">
+                <Grid>
                     <Cell col={12}>
-                        <div className="banner-text-abs">
+                        <div className="banner-text">
                             <h1>Welcome to Event Pal!</h1>
                         </div>
                         <img 
@@ -16,7 +16,7 @@ class LandingPage extends Component {
                         />
                     </Cell>
                     <Cell col={12}>
-                        <a href="/findevent" className="banner-text button">Find an event</a>
+                        <a href="/findevent" className="button banner-text">Find an event</a>
                     </Cell>
                 </Grid>
             </div>
@@ -24,4 +24,4 @@ class LandingPage extends Component {
     }
 }
 
-export default LandingPage
+export default LandingPage;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Tabs, Tab, Grid, Cell, Card, CardText, CardTitle, CardActions, Button, CardMenu, IconButton} from 'react-mdl';
 
+
 class FindEvent extends Component {
     constructor(props) {
         super(props);
@@ -260,6 +261,7 @@ class FindEvent extends Component {
 
     render() {
         return(
+
             <div className="category-tabs">
                 <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
                     <Tab>Sports</Tab>
@@ -275,6 +277,7 @@ class FindEvent extends Component {
                         <div className="content">{this.toggleCategories()}</div>
                     </Cell>
                 </Grid>
+
             </div>
         )
     }
