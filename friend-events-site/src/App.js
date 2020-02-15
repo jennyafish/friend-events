@@ -8,7 +8,7 @@ class App extends Component {
   render() {
   return (
     <div style={{height: '1000px', position: 'relative'}}>
-        <Layout style={{background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover'}}>
+        <Layout style={{background: 'url(http://www.clker.com/cliparts/7/a/8/d/13435880431238986173light_blue.jpg) center / cover'}}>
             <Header className="header-color" title="Event Pal" style={{color: 'white'}}>
                 <Navigation>
                     <Link to="/about">About</Link>

@@ -8,8 +8,9 @@ class LandingPage extends Component {
                 <Grid className="landing-grid">
                     <Cell col={12}>
                         <img 
-                            src="https://localtvktvi.files.wordpress.com/2019/04/gettyimages-873431730.jpg?quality=85&strip=all&w=400&h=225&crop=1"
+                            src="https://c2.staticflickr.com/6/5001/5275906661_d929e53ee3_b.jpg"
                             className="home-img"
+
                         />
                     </Cell>
                 </Grid>
