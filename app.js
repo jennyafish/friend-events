@@ -7,6 +7,9 @@ const react = require('react');
 
 const app = express();
 
+// import mongoose models
+const User = require('models/user');
+
 debug('booting');
 
 app.get('/', function (req, res) {

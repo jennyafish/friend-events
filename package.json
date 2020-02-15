@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/jennyafish/friend-events#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "debug": "^4.1.1",
     "express": "^4.17.1",
     "mongodb": "^3.5.3",
+    "mongoose": "^5.9.1",
     "react": "^16.12.0"
   }
 }
