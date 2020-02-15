@@ -11,7 +11,7 @@ const app = express();
 
 // import mongoose models
 const User = require('models/user');
-const Event = require('models/event')
+const Event = require('models/event');
 
 
 
@@ -73,8 +73,8 @@ app.put('/events/:eventname/:username', (req, res) => {
 
 // create user
 app.post('/user', (req, res) => {
-  var newUser = new User({ 
-    username: req.username, 
+  var newUser = new User({
+    username: req.username,
     password: User.hashPassword(req.password),
     events: [],
     email: req.email
@@ -85,7 +85,7 @@ app.post('/user', (req, res) => {
 
 // create event
 app.post('/event', (req, res) => {
-  var newEvent = new Event({ 
+  var newEvent = new Event({
     eventName: req.eventName,
     users: [],
     startTime: req.startTime,
@@ -98,7 +98,7 @@ app.post('/event', (req, res) => {
 
 
 
-
+// big testing energy
 app.get('/', function (req, res) {
   console.log('got to route /');
   res.send('Homepage');
