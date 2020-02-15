@@ -6,9 +6,10 @@ const userSchema = new mongoose.Schema({
    username: String,
    password: String,
    bio: String,
-   podcasts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Podcast' }],
-   posts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Post' }],
-   pic: String //Using type String for now, bound to change
+   events: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Event' }],
+   email: String
+   //posts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Post' }],
+   //pic: String //Using type String for now, bound to change
 });
 
 module.exports = mongoose.model("User", userSchema);
