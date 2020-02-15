@@ -11,6 +11,7 @@ class App extends Component {
         <Layout style={{background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover'}}>
             <Header className="header-color" title="Event Pal" style={{color: 'white'}}>
                 <Navigation>
+                    <Link to="/">Home</Link>
                     <Link to="/about">About</Link>
                     <Link to="/findevent">Find Event</Link>
                     <Link to="/trackevent">Track Event</Link>
@@ -19,6 +20,7 @@ class App extends Component {
             </Header>
             <Drawer title="Event Pal">
                 <Navigation>
+                    <Link to="/">Home</Link>
                     <Link to="/about">About</Link>
                     <Link to="/findevent">Find Event</Link>
                     <Link to="/trackevent">Track Event</Link>
